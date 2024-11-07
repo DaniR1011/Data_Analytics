@@ -55,13 +55,12 @@ de esta query, que me ha aportado gran valor:
 
 <img align="center" src="./assets/query_SQL.png" />
 
-<br>
 En esta query, primero he concatenado el nombre y el apellido de los actores, para
 obtenerlo en una única columnas. Después, he detallado que el id del actor (cada actor
 posee un id único), no aparezca en las películas de la categoría Music. Relacionando
 las tablas, para unir actor con categoría de las películas. Por último, he ordenado
 los resultados a través del nombre completo del actor.
-
+<br>
 💻 Totalmente ilusionado y preparado para seguir realizando este tipo de proyectos, y
 aprender nuevas tecnologías y herramientas.
 
