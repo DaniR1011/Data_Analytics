@@ -24,7 +24,7 @@ order by "length" asc;
 -- 6 Encuentra el nombre y apellido de los actores que tengan ‘Allenʼ en su apellido.
 select concat("first_name", ' ', "last_name") as allen_surname
 from "actor"
-where "last_name" = 'ALLEN';
+where "last_name" LIKE '%ALLEN%';
 
 -- 7 Encuentra la cantidad total de películas en cada clasificación de la tabla “filmˮ y muestra la clasificación junto con el recuento.
 select  "rating" , count(*) as film_rating
@@ -63,7 +63,7 @@ where "rating" not in ('NC-17', 'G');
 -- 13 Encuentra el promedio de duración de las películas para cada clasificación de la tabla film y muestra la clasificación junto con el promedio de duración.
 select "rating", avg("length") as avg_duration
 from "film"
-group by rating;
+group by "rating";
 
 -- 14 Encuentra el título de todas las películas que tengan una duración mayor a 180 minutos.
 select "title" as film_more_180min_duration
@@ -117,7 +117,7 @@ from "actor";
 
 -- 23 Números de alquiler por día, ordenados por cantidad de alquiler de forma descendente.
 select "rental_date", 
-       count(*) as rental_day_by_day
+       count(rental_id) as rental_day_by_day
 from "rental"
 group by "rental_date"
 order by rental_day_by_day desc;
@@ -219,9 +219,10 @@ select count(*) as total_actors
 from "actor";
 
 -- 39 Selecciona todos los actores y ordénalos por apellido en orden ascendente.
-select "last_name" as apellido
+select "first_name" as name,
+       "last_name" as apellido
 from "actor"
-order by last_name asc;
+order by apellido asc;
 
 -- 40 Selecciona las primeras 5 películas de la tabla “filmˮ.
 select "title" as first_five_films
@@ -233,7 +234,12 @@ limit 5;
 select "first_name", count(*) as repeated_names
 from "actor"
 group by "first_name"
-order by repeated_names desc 
+order by repeated_names;
+
+select "first_name", count(*) as repeated_names
+from "actor"
+group by "first_name"
+order by repeated_names desc
 limit 1;
 
 -- 42 Encuentra todos los alquileres y los nombres de los clientes que los realizaron.
@@ -281,14 +287,15 @@ left join "film_actor" on "actor"."actor_id" = "film_actor"."actor_id"
 group by actor_name;
 
 -- 48 Crea una vista llamada “actor_num_peliculasˮ que muestre los nombres de los actores y el número de películas en las que han participado.
+create view "actor_num_peliculas"
 select concat("first_name", ' ', "last_name", ' ', count("film_actor"."film_id")) as actor_num_films
 from "actor"
 left join "film_actor" on "actor"."actor_id" = "film_actor"."actor_id"
 group by "actor"."first_name", "actor"."last_name";
 
 -- 49 Calcula el número total de alquileres realizados por cada cliente.
-select concat("first_name", ' ', "last_name", ' ', 
-       count("rental"."rental_id")) as customer_rental_num
+select concat("first_name", ' ', "last_name") as actor_name,
+       count("rental"."rental_id") as customer_rental_num
 from "customer"
 inner join "rental" on "customer"."customer_id" = "rental"."customer_id"
 group by "customer"."first_name", "customer"."last_name";
@@ -318,15 +325,15 @@ group by "film"."film_id", "film"."title"
 having count("rental"."rental_id") >= 10;
 
 -- 53 Encuentra el título de las películas que han sido alquiladas por el cliente con el nombre ‘Tammy Sandersʼ y que aún no se han devuelto. Ordena los resultados alfabéticamente por título de película.
-select "film"."title"
+select "film"."title" as film_title
 from "customer" 
 inner join "rental" on "customer"."customer_id" = "rental"."customer_id"
 inner join "inventory" on "rental"."inventory_id" = "inventory"."inventory_id"
 inner join "film" on "inventory"."film_id" = "film"."film_id"
-where "customer"."first_name" = 'Tammy' 
-      and "customer"."last_name" = 'Sanders'
+where "customer"."first_name" = 'TAMMY' 
+      and "customer"."last_name" = 'SANDERS'
       and "rental"."return_date" is null
-order by "film"."title";
+order by film_title;
 
 -- 54 Encuentra los nombres de los actores que han actuado en al menos una película que pertenece a la categoría ‘Sci-Fiʼ. Ordena los resultados alfabéticamente por apellido.
 select concat("actor"."first_name", ' ', "actor"."last_name") as actor_name
@@ -368,12 +375,12 @@ where "actor"."actor_id" not in (
 order by "actor_name";
 
 -- 57 Encuentra el título de todas las películas que fueron alquiladas por más de 8 días.
-select "film"."film_id", "film"."title", count("rental"."rental_id")
+select "film"."film_id", "film"."title", count("rental"."rental_date") 
 from "film"
 inner join "inventory" on "film"."film_id" = "inventory"."film_id"
 inner join "rental" on "inventory"."inventory_id" = "rental"."rental_id"
 group by "film"."film_id"
-having count("rental"."rental_id") > 8;
+having count("rental"."rental_date") > 8;
 
 -- 58 Encuentra el título de todas las películas que son de la misma categoría que ‘Animationʼ.
 select "film"."title" as film_title
@@ -392,15 +399,15 @@ where "film"."length" = (
 order by "film_title";
 
 -- 60 Encuentra los nombres de los clientes que han alquilado al menos 7 películas distintas. Ordena los resultados alfabéticamente por apellido.
-select concat("customer"."first_name", 
-       "customer"."last_name") as customer_name
+select "customer"."first_name",
+       "customer"."last_name" as apellido
 from "customer"
 inner join "rental" on "customer"."customer_id" = "rental"."customer_id"
 inner join "inventory" on "rental"."inventory_id" = "inventory"."inventory_id"
 inner join "film" on "inventory"."film_id" = "film"."film_id"
-group by customer_name
+group by "customer"."first_name", "customer"."last_name"
 having count(distinct "film"."film_id") >= 7
-order by customer_name;
+order by apellido;
 
 -- 61 Encuentra la cantidad total de películas alquiladas por categoría y muestra el nombre de la categoría junto con el recuento de alquileres.
 select "category"."name" as category_name, 
@@ -427,7 +434,7 @@ order by "category_name";
 select concat("first_name", ' ', "last_name") as staff_name,
        "staff"."store_id",
        "staff"."address_id",
-       "staff"."address_id",
+       "store"."address_id",
        "store"."store_id"
 from "staff"
 cross join "store";
