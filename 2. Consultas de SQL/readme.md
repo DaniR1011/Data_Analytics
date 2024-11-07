@@ -61,6 +61,7 @@ posee un id único), no aparezca en las películas de la categoría Music. Relac
 las tablas, para unir actor con categoría de las películas. Por último, he ordenado
 los resultados a través del nombre completo del actor.
 <br>
+
 💻 Totalmente ilusionado y preparado para seguir realizando este tipo de proyectos, y
 aprender nuevas tecnologías y herramientas.
 
