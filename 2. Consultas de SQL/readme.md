@@ -1,6 +1,6 @@
 ## 🚀 Proyecto 2: Consultas lógicas SQL
 
-<img align="center" src="./assets/banner.webp" width="70%" />
+<img align="center" src="./assets/banner.webp" width="50%" />
 
 ## 🧠 Descripción del proyecto
 
@@ -24,9 +24,9 @@ su base de datos correspondiente.
 3️⃣ Después, con las tablas creadas, he podido visualizar el esquema general de la base de datos,
 permitiendo ver la relación y el flujo que siguen las tablas entre ellas. Dejo por aquí el esquema
 general de las tablas:
-<br>
-<img align="center" src="./assets/Esquema_dbeaver.png" width="85%" />
-<br>
+
+<img align="center" src="./assets/Esquema_dbeaver.png" width="80%" />
+
 4️⃣ Finalmente, con el conocimiento obtenido y entendiendo la correcta relación de las tablas, he realizado
 las queries que se han ido proponiendo. Atendiendo siempre al enunciado y utilizando el mejor
 formato de unión entre las diversas tablas (inner join, left join, cross join...)
@@ -51,7 +51,11 @@ una base de datos totalmente vacía y como añadir contenido para después traba
 Destacaría el hecho de entender y relacionar varias tablas, a través de parámetros
 coincidentes, para establecer las uniones entre ellas. Como por ejemplo, la resolución
 de esta query, que me ha aportado gran valor:
+<br>
+
 <img align="center" src="./assets/query_SQL.png" />
+
+<br>
 En esta query, primero he concatenado el nombre y el apellido de los actores, para
 obtenerlo en una única columnas. Después, he detallado que el id del actor (cada actor
 posee un id único), no aparezca en las películas de la categoría Music. Relacionando
