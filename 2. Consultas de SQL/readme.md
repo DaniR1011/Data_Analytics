@@ -16,15 +16,17 @@ Vamos a ver las herramientas utilizadas y los pasos seguidos para su resolución
 1️⃣ En primer lugar, he abierto la aplicación DBeaver y he creado una base de datos, que he
 llamado films. Una vez creada y seleccionada por defecto, he abierto el fichero .sql que
 contiene la información de la base de datos.
+<br>
 2️⃣ Una vez abierto el fichero, y creada la base de datos, he seleccionado la totalidad
 del archivo y he ejecutado el script. Esto me ha permitido la creación de las tablas dentro de
 su base de datos correspondiente.
+<br>
 3️⃣ Después, con las tablas creadas, he podido visualizar el esquema general de la base de datos,
 permitiendo ver la relación y el flujo que siguen las tablas entre ellas. Dejo por aquí el esquema
 general de las tablas:
-
+<br>
 <img align="center" src="./assets/Esquema_dbeaver.png" width="85%" />
-
+<br>
 4️⃣ Finalmente, con el conocimiento obtenido y entendiendo la correcta relación de las tablas, he realizado
 las queries que se han ido proponiendo. Atendiendo siempre al enunciado y utilizando el mejor
 formato de unión entre las diversas tablas (inner join, left join, cross join...)
