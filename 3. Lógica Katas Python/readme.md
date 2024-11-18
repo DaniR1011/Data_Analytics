@@ -17,11 +17,11 @@ Vamos a ver las herramientas utilizadas y los pasos seguidos para su resolución
 las extensiones: Jupyter, JupyterNotebook y Python.
 <br>
 2️⃣ Una vez instaladas estas extensiones, Python nos permite adecuar el código a este lenguaje,
-con sus característicos colores. Mientras que Jupyter, nos permite dividir el archivo en markdown (cuadro
-de texto) y celdas de código, que se ejecutan independientemente unas de otras.
+con sus característicos colores. En este caso, he utilizado el archivo exclusivo de Python, pero
+recomiendo instalar JupyterNotebook por si se prefiere optar por la creación de celdas.
 <br>
-3️⃣ Tras tener todo preparado he instalado, he ido creando texto markdown para el enunciado,
-y celdas de código de Python con su respectiva resolución.
+3️⃣ Tras tener todo preparado e instalado, he realizado cada kata mediante el lenguaje Python. Incluyendo
+los docstring con la explicación individual de cada kata.
 
 ## 📁 Estructura del proyecto
 
