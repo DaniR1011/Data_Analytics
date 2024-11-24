@@ -54,22 +54,24 @@ valor de mercado y mayor gasto en salarios. Visualización de los KPI´s: ⬇️
 
 Por otro lado, podemos observar un mapa, con zonas de calor dependiendo de los países
 que más goles han anotado. El mapa nos permite tener una visión más clara, para entender
-la ubicación geográfica de los países más goleadores. Analizamos como predominan jugadores,
-que provienen de sudamérica. Ejemplo del mapa: ⬇️
+la ubicación geográfica de los países más goleadores. Analizamos como los jugadores que
+provienen de sudamérica, son los que más goles han anotado. Ejemplo del mapa: ⬇️
 <br>
 <img align="center" src="./assets/mapa.png" width="60%" />
 
 Además, podemos observar diferentes tablas de columnas 2D en vertical y horizontal, que
 muestran la clasificación de equipos con mayor valor de mercado y gastos en salario. Analizamos
-como el Manchester City es el equipo más valioso y de los que más pagan en salario. Aquí puedes
-observar la previsualización: ⬇️
+como el Chelsea, es el único equipo que entra en el top 5 tanto de equipos más valiosos, como
+de equipos con mayor gasto en salarios. Aquí puedes observar la previsualización: ⬇️
 <br>
 <img align="center" src="./assets/tablas.png" width="60%" />
 
 Finalmente, he utilizado gráficos de anillo para mostrar información, de diferente manera
 a la que realicé anteriormente, y dotarle un aspecto más completo al dashboard. Observamos
-los jugadores con más partidos y más goles con la selección. Aquí dejo una previsualización
-de los gráficos: ⬇️
+como Cristiano Ronaldo es el jugador con más goles, pero también el que más partidos ha
+disputado. Por ello, podemos deducir que Leo Messi (segundo máximo goleador), es capaz de
+anotar más goles en menos partidos disputados. Aquí dejo una previsualización de los
+gráficos: ⬇️
 <br>
 <img align="center" src="./assets/graficos.png" width="60%" />
 
