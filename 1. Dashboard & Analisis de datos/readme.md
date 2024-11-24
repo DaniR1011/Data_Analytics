@@ -49,24 +49,28 @@ variación a la hora de aplicar un filtro. En este caso, he utilizado informaci�
 sobre el Real Madrid. Observamos como el Real Madrid es un equipo, con gran cantidad de
 jugadores, en concreto jóvenes y grandes promesas. Además es uno de los equipos, con mayor
 valor de mercado y mayor gasto en salarios. Visualización de los KPI´s: ⬇️
+<br>
 <img align="center" src="./assets/KPI´s.png" width="60%" />
 
 Por otro lado, podemos observar un mapa, con zonas de calor dependiendo de los países
 que más goles han anotado. El mapa nos permite tener una visión más clara, para entender
 la ubicación geográfica de los países más goleadores. Analizamos como predominan jugadores,
 que provienen de sudamérica. Ejemplo del mapa: ⬇️
+<br>
 <img align="center" src="./assets/mapa.png" width="60%" />
 
 Además, podemos observar diferentes tablas de columnas 2D en vertical y horizontal, que
 muestran la clasificación de equipos con mayor valor de mercado y gastos en salario. Analizamos
 como el Manchester City es el equipo más valioso y de los que más pagan en salario. Aquí puedes
 observar la previsualización: ⬇️
+<br>
 <img align="center" src="./assets/tablas.png" width="60%" />
 
 Finalmente, he utilizado gráficos de anillo para mostrar información, de diferente manera
 a la que realicé anteriormente, y dotarle un aspecto más completo al dashboard. Observamos
 los jugadores con más partidos y más goles con la selección. Aquí dejo una previsualización
 de los gráficos: ⬇️
+<br>
 <img align="center" src="./assets/graficos.png" width="60%" />
 
 <br>
