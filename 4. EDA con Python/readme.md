@@ -7,7 +7,9 @@
 Este proyecto ha consistido en un Análisis Exploratorio de Datos (EDA),
 sobre un conjunto de datos específico con el objetivo de comprender su
 estructura, identificar patrones y relaciones, y detectar cualquier
-inconsistencia o valor atípico. Durante el proceso de EDA, se han aplicado
+inconsistencia o valor atípico.
+<br>
+Durante el proceso de EDA, se han aplicado
 técnicas estadísticas y visuales para analizar la distribución de las variables,
 explorar correlaciones entre ellas, y verificar la presencia de valores faltantes o anómalos.
 
@@ -48,9 +50,12 @@ pip3 install seaborn
 Tras realizar el análisis exploratorio de los datos, se identificaron varias conclusiones importantes:
 
 • La mayoría de los clientes tiene entre 20 y 60 años de edad.
+<br>
 • Se observó un predominio de personas casadas, respecto de personas solteras y divorciadas.
+<br>
 • Se encontraron los trabajos más predominantes dentro de la columna 'job', siendo: admin,
 blue-collar y technician.
+<br>
 • En términos de próximos pasos, se recomienda realizar un análisis más detallado de las variables relacionadas
 con la duración y considerar un modelo predictivo para predecir la duración del trabajo de los clientes.
 <br>
