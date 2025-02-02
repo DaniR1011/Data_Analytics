@@ -29,19 +29,66 @@ La estructura del proyecto es la siguiente:
 
 ## 🛠️ Instalación y Requisitos
 
-Este proyecto utiliza Python con Pandas, y necesita las siguientes dependencias:
+Este proyecto utiliza Python con Pandas, y necesita instalar las siguientes dependencias:
 
-- pandas
-- numpy
-- matplotlib.pyplot
-- seaborn
-- plotly
+- [Pandas](https://pandas.pydata.org/docs/)
+- [NumPy](https://numpy.org/doc/)
+- [Matplotlib](https://matplotlib.org/stable/contents.html)
+- [Seaborn](https://seaborn.pydata.org/)
+- [Plotly](https://plotly.com/python/)
 
-Para instalar las dependencias, puedes ejecutar el siguiente comando dentro de un entorno virtual:
+Para instalar las dependencias utilizadas, puedes ejecutar el siguiente comando dentro de un entorno virtual:
 
 ```bash
 pip3 install seaborn
 ```
+
+## 📊 Descripción de los datos
+
+El análisis se realizó a partir de dos archivos de datos originales:
+
+- **`bank_additional.csv`**: Contiene información sobre los productos suscritos a depósitos
+  bancarios, en relación con el cliente.
+- **`customer_details.xlsx`**: Contiene información extra y más detallada sobre el cliente.
+
+Estos archivos fueron combinados y transformados para generar un dataset final, que es el
+que se utilizó en el análisis.
+
+- **`transform_Data.csv`**: Incluye el set de datos final combinado, productos suscritos
+  a depósitos bancarios, junto con información detallada sobre cada cliente.
+
+A continuación, se describen sus columnas:
+
+| Columna             | Descripción                                                       | Tipo de dato | Ejemplo                              |
+| ------------------- | ----------------------------------------------------------------- | ------------ | ------------------------------------ |
+| `age`               | Edad de la persona registrada en el dataset.                      | Float        | 57                                   |
+| `job`               | Ocupación o trabajo de la persona registrada.                     | Object       | Housemaid                            |
+| `marital`           | Estado civil de la persona registrada.                            | Object       | Married                              |
+| `education`         | Nivel educativo de la persona registrada.                         | Object       | Basic.4y                             |
+| `default`           | Indica si la persona tiene algún historial de impago de deuda.    | Float        | False                                |
+| `housing`           | Indica si la persona tiene un préstamo hipotecario.               | Float        | False                                |
+| `loan`              | Indica si la persona tiene algún préstamo personal.               | Float        | True                                 |
+| `contact`           | Medio de contacto utilizado para la campaña.                      | Object       | Telephone                            |
+| `duration`          | Duración de la última llamada de contacto en segundos.            | Float        | 261.0                                |
+| `campaign`          | Número de contactos realizados durante esta campaña de marketing. | Float        | 2.56                                 |
+| `pdays`             | Número de días desde el último contacto previo en la campaña.     | Float        | 962.33                               |
+| `previous`          | Número de contactos realizados durante la campaña anterior.       | Float        | 0.174                                |
+| `poutcome`          | Resultado de la campaña anterior.                                 | Object       | NONEXISTENT                          |
+| `emp.var.rate`      | Tasa de variación del empleo.                                     | Float        | 0.077                                |
+| `cons.price.idx`    | Índice de precios del consumidor.                                 | Object       | 93.994                               |
+| `cons.conf.idx`     | Índice de confianza del consumidor.                               | Object       | -36.4                                |
+| `euribor3m`         | Tasa de interés de referencia a 3 meses en Europa.                | Object       | 4.857                                |
+| `nr.employed`       | Número de empleados en el sector.                                 | Object       | 5191                                 |
+| `y`                 | Resultado de la campaña de marketing (suscrito o no).             | Object       | No                                   |
+| `date`              | Fecha en la que se registró el contacto con la persona.           | Object       | 2-agosto-2019                        |
+| `latitude`          | Latitud de la ubicación del cliente.                              | Float        | 41.485                               |
+| `longitude`         | Longitud de la ubicación del cliente.                             | Float        | -71.233                              |
+| `id_`               | Identificador único de la transacción.                            | Object       | 089b39d8-e4d0-461b-87d4-814d71e0e079 |
+| `Income`            | Ingreso anual de la persona registrada.                           | Float        | 93227.38                             |
+| `Kidhome`           | Número de niños menores de 18 años en el hogar.                   | Float        | 1.004                                |
+| `Teenhome`          | Número de adolescentes (entre 12 y 18 años) en el hogar.          | Float        | 0.99                                 |
+| `Dt_Customer`       | Fecha en la que la persona se registró como cliente.              | Datetime     | 1                                    |
+| `NumWebVisitsMonth` | Número de visitas mensuales al sitio web de la empresa.           | Float        | 16.59                                |
 
 ## 🧾 Informe explicativo del análisis
 
@@ -131,7 +178,9 @@ y technician. Es importante analizar el porqué de esta información. Si se prod
 mejor salario, con las mejores condiciones o porque se debe mejorar el resto de trabajos, para lograr una media.
 <br>
 • En relación al estado civil y al trabajo de los clientes, observamos como los clientes divorciados, en su mayoría
-trabajan como admin. Además, obtenemos como el trabajo con menor frecuencia de personas divorciadas es student. Por ello, llegamos a la conclusión de que nuestros datos están correctamente presentados, es decir, siendo estudiante aún no ha dado tiempo a estar divorciado.
+trabajan como admin. Además, obtenemos como el trabajo con menor frecuencia de personas divorciadas es student. Por ello,
+llegamos a la conclusión de que nuestros datos están correctamente presentados, es decir, siendo estudiante aún no
+ha dado tiempo a estar divorciado.
 <br>
 • Finalmente, hemos obtenido que la media de edad de nuestros clientes es de 39 años. Siendo 17 el cliente más joven y
 98 nuestro cliente más longevo. Además, atendiendo a la duración del contacto directo, obtenemos como la duración media
