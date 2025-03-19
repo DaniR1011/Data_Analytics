@@ -111,19 +111,58 @@ deberán ser modificados a int, solamente aquellas columnas, que no almacenen va
 
 #### 2. Resumen del proceso
 
-lorem
+Una vez realizado el preanálisis, y estudiado a fondo nuestro set de datos, llega el momento de
+comenzar con la limpieza y transformación de los datos. Los pasos realizados fueron:
+<br>
+• En primer lugar, se encontraron columnas con un 100% de valores nulos, que fueron eliminadas.
+También había columnas con menos de un 5% de valores nulos, que fueron reemplazados por 0.
+<br>
+• Después, analizamos si existen valores duplicados, en este caso no hay ninguno.
+<br>
+• Por otro lado, modificamos el tipo de dato en las columnas necesarias, cambiando los valores
+de float64 a int. Añadiendo el errors="coerce" en las columnas que lo necesite. Coerce añade
+valores NaN, sobre las columnas que posean valores faltantes.
+<br>
+• Además, realizamos la estandarización de valores categóricos, de modo que eliminamos espacios
+en los nombres de las columnas, y definimos todas las columnas como minúsculas, para evitar
+problemas a la hora de hacer referencia a cualquier dato.
 
 #### 3. Hallazgos clave
 
-lorem
+Los insights más relevantes obtenidos han sido:
+<br>
+• Los equipos españoles son los que más partidos han disputado. Aportando con Real Madrid y
+FC Barcelona, dos de los cinco equipos con más victorias conseguidas.
+<br>
+• Además, hemos obtenido que la media de espectadores es de 30000, obteniendo estadios con
+80000 espectadores y estadios con 10000, influyendo en la victoria o derrota del equipo.
+<br>
+• Obtenemos como las 5 grandes ligas; España, Inglaterra, Francia, Alemania e Italia, aportan
+casi el 10% del total de los equipos, cada una de ellas. Formado en conjunto, algo más del 40%
+del total de equipos.
 
 #### 4. Visualización de hallazgos
 
-lorem
+A través de las visualizaciones obtenidas, podemos obtener una serie de conclusiones sobre nuestros datos:
+<br>
+• El histograma sobre los jugadores internacionales, nos informa que hay más de 15000 equipos que no aportan ningún jugador con su selección. Por otro lado, unos 500 equipos son capaces de tener en su plantilla una cifra superior o igual a 20, de jugadores que viajan con sus respectivas selecciones.
+<br>
+• El gráfico de Barras Apiladas nos muestra que el hosting (posición del equipo en el partido; local o visitante) influye a la hora del resultado final. Es decir, cuando el equipo juega como local hay una mayor probabilidad de que consiga la victoria.
+<br>
+• El boxplot nos permite analizar que las plantillas que tienen una mayor media de edad, es decir, poseen mayor veteranía, han conseguido mayor victorias, debido a la experiencia.
 
 #### 5. Conclusiones
 
-lorem
+Tras realizar el análisis exploratorio de los datos, se identificaron varias conclusiones importantes:
+<br>
+• Podemos observar como los tres equipos con más partidos disputados son españoles. El Real Madrid es el equipo con más victorias, superando mínimamente al FC Barcelona. Sin embargo, el tercer equipo (Sevilla FC), tiene muchas menos victorias prácticamente con los mismos partidos disputados.
+<br>
+• Podemos observar como se producen el mismo número de derrotas y de victorias, con el mismo tamaño medio en la plantilla. Por lo tanto, el tamaño de la plantilla no influye sobre el resultado final del equipo.
+<br>
+• Podemos observar como el FC Barcelona y el Bayern Munchen tienen una mayor cantidad de victorias como visitantes. Real Madrid y Celtic tienen el mismo número de victorias tanto de locales, como de visitantes. Estos datos indican que los 4 equipos obtienen siempre un gran resultado como visitantes (tiene una mayor dificultad respecto a ser local).
+<br>
+• Podemos observar como la capacidad del estadio, está relacionada con las victorias del equipo. Un estadio con una capacidad pequeña tiene menor número de victorias, que un estadio con una gran capacidad. Por lo tanto, la capacidad influye en el resultado del equipo.
+<br>
 
 💻 Me encuentro totalmente ilusionado y preparado para seguir realizando este tipo de proyectos, y
 aprender nuevas tecnologías y herramientas.
