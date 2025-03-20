@@ -1,6 +1,6 @@
 import pandas as pd
 
-def procesar_dataframe(df, cambiar_nombre_columnas=None, cambiar_tipo_columnas=None):
+def procesar_dataframe(df, cambiar_tipo_columnas=None):
     """
     Función que cambia los nombres de las columnas y sus tipos de datos.
 
