@@ -27,6 +27,7 @@ La estructura del proyecto es la siguiente:
 │   ├── raw_data/           # Contiene los datos en bruto
 │   └── transform_data/     # Contiene el archivo transformado
 ├── notebooks/              # Contiene los archivos ipynb
+├── reports/                # Contiene el Dashboard de Power BI
 ├── src/                    # Contiene el archivo .py con las funciones
 ├── readme.md               # Descripción completa del proyecto
 ```
